@@ -51,7 +51,7 @@ string break_lines(string text, int cols) {
                 // This is the first word, so we don't want a space before it
                 output += word;
                 i += n;
-            } else if (i + n < cols) {
+            } else if (cols < 0 || i + n < cols) {
                 // This word fits on the current line, so we don't need to start a new line
                 output += sep + word;
                 i += n + 1;
